@@ -1,0 +1,26 @@
+#https://projecteuler.net/problem=4
+#A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+
+#Find the largest palindrome made from the product of two 3-digit numbers.
+
+import time
+
+def is_palindrome(pot_pal):
+    pot_pal_list = list(pot_pal)
+    if pot_pal_list == pot_pal_list[::-1]:
+        print(pot_pal)
+        return True
+def megatron(k):
+    for number in range(k, 0, -1):
+        pot_pal = k * number
+        pot_pat_str = str(pot_pal)
+        if is_palindrome(pot_pat_str):
+            print(k)
+            print(number)
+            megatron(k - 1)
+            break
+
+start = time.time()
+megatron(99999999)
+stop = time.time()
+print(stop - start)
