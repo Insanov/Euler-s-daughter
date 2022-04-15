@@ -1,3 +1,5 @@
+.editorconfig
+*.o
 *.exe
 .vscode
 .idea
