@@ -1,12 +1,11 @@
 #include <stdlib.h>
-#include <unistd.h>
 
 char *ft_concat_params(int argc, char **argv);
 
 int main(int argc, char *argv)
 {
     ft_concat_params(argc, &argv);
-    
+
     return 0;
 }
 
