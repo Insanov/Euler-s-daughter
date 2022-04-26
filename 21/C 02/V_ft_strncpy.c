@@ -2,10 +2,10 @@ char *ft_strncpy(char *dest, char *src, unsigned int n);
 
 int main(void)
 {
-    char first[] = "";
-    char second[] = "world";
+    char dest[] = "worldgsjsgkstykhktyk";
+    char src[] = "aler";
 
-    ft_strncpy(first, second, 10);
+    ft_strncpy(dest, src, 10);
 
     return 0;
 }
