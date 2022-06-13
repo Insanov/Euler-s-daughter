@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
+#include <stddef.h>
 
 char *longestConsec(const char *const strings[], int arr_len, int k);
 int *quickSort(int *arr, int first, int last);
@@ -19,7 +20,7 @@ char *longestConsec(const char *const strings[], int arr_len, int k)
         return NULL;
     int sum = 0, j = 0;
 
-    int *arr = (int *)(malloc(sizeof(int) * arr_len));
+    int *arr = malloc(sizeof(int) * arr_len);
     for (; j < arr_len; j++)
         *(arr + j) = 100 * check_length(strings[j]) + (arr_len - j);
 
@@ -39,6 +40,7 @@ char *longestConsec(const char *const strings[], int arr_len, int k)
             strcat(result, strings[i]);
         tmp = i;
     }
+
     return result;
 }
 
